@@ -1,0 +1,28 @@
+.rulecms-operations {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rulecms-operations h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.operation-result {
+  margin-bottom: 1rem;
+}
+
+.operation-result p {
+  margin-bottom: 0.5rem;
+}
+
+.operation-description {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--gray-700);
+}
