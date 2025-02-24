@@ -227,6 +227,19 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+      
+      <!-- Add the RuleCMS operations display here -->
+      <div class="rulecms-operations">
+        <h2>RuleCMS Operations</h2>
+        <div class="operation-result">
+          <p><strong>Addition Operation:</strong> 1 + 2 = {{ addResult }}</p>
+          <p><strong>Subtraction Operation:</strong> 1 - 2 = {{ subtractResult }}</p>
+        </div>
+        <p class="operation-description">
+          These values are calculated using the RuleCMS client library functions.
+          The operations are performed when the component initializes.
+        </p>
+      </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
