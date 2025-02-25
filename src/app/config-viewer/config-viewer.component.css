@@ -1,0 +1,124 @@
+.config-viewer-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.config-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.input-group label {
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+button {
+  background-color: var(--bright-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: color-mix(in srgb, var(--bright-blue) 80%, black);
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.refresh-icon {
+  font-size: 1.2rem;
+}
+
+.config-display {
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 200px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-style: italic;
+  color: var(--gray-700);
+}
+
+.error {
+  color: #d32f2f;
+  padding: 1rem;
+  background-color: rgba(211, 47, 47, 0.1);
+  border-radius: 4px;
+}
+
+.error-help {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.config-result h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.key-highlight {
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.json-display {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow: auto;
+  max-height: 400px;
+}
+
+.json-display pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.no-data {
+  font-style: italic;
+  color: var(--gray-700);
+  text-align: center;
+  padding: 2rem;
+}
