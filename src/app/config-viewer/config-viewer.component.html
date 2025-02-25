@@ -1,0 +1,48 @@
+<div class="config-viewer-container">
+  <h2>RuleCMS Configuration Viewer</h2>
+
+  <div class="config-controls">
+    <div class="input-group">
+      <label for="configKey">Configuration Key:</label>
+      <input
+        type="text"
+        id="configKey"
+        [value]="configKey"
+        #keyInput
+        (keyup.enter)="setConfigKey(keyInput.value)"
+      />
+      <button (click)="setConfigKey(keyInput.value)">Fetch</button>
+    </div>
+
+    <button class="refresh-btn" (click)="refreshConfiguration()">
+      <span class="refresh-icon">↻</span> Refresh
+    </button>
+  </div>
+
+  <div class="config-display">
+    <div *ngIf="isLoading" class="loading">Loading configuration data...</div>
+
+    <div *ngIf="error" class="error">
+      <p>Error: {{ error }}</p>
+      <p class="error-help">
+        Make sure the RuleCMS service is available and the configuration key
+        exists.
+      </p>
+    </div>
+
+    <div *ngIf="!isLoading && !error" class="config-result">
+      <h3>
+        Configuration for key:
+        <span class="key-highlight">{{ configKey }}</span>
+      </h3>
+
+      <div *ngIf="configData" class="json-display">
+        <pre>{{ configData | json }}</pre>
+      </div>
+
+      <div *ngIf="!configData" class="no-data">
+        No configuration data found for the specified key.
+      </div>
+    </div>
+  </div>
+</div>
