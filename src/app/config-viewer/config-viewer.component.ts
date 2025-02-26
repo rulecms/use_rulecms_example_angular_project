@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getConfigurationByKey } from '@rulecms/client';
+import { getConfigurationByKey, initialize } from '@rulecms/client';
 
 @Component({
   selector: 'app-config-viewer',
@@ -41,3 +41,7 @@ export class ConfigViewerComponent implements OnInit {
     this.fetchConfiguration();
   }
 }
+
+initialize({
+  apiKey: 'your-api-key',
+});
