@@ -1,59 +1,77 @@
-# UseRulecmsExampleAngularProject
+# RuleCMS Angular Example Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+This project demonstrates the integration of RuleCMS with an Angular application.
 
-## Development server
+## Prerequisites
 
-To start a local development server, run:
+- Node.js (v16 or higher)
+- npm (v7 or higher)
+- Angular CLI (v19 or higher)
 
+## Getting Started
+
+1. Clone the repository:
 ```bash
-ng serve
+git clone <repository-url>
+cd use_rulecms_example_angular_project
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Install dependencies:
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. Set up environment variables:
+   - Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+   - Open `.env` and replace the placeholder with your RuleCMS API key:
+   ```
+   RULE_CMS_API_KEY=your-actual-api-key
+   ```
+   You can get your API key from the RuleCMS dashboard.
 
+4. Start the development server:
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+The application will be available at `http://localhost:4200`.
 
-To build the project run:
+## Environment Variables
 
-```bash
-ng build
-```
+This project uses environment variables to manage sensitive configuration like API keys. The following environment variables are required:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- `RULE_CMS_API_KEY`: Your RuleCMS API key
 
-## Running unit tests
+### Development vs Production
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- For development, the application uses `src/environments/environment.development.ts`
+- For production, it uses `src/environments/environment.prod.ts`
 
-```bash
-ng test
-```
+The environment files are automatically generated from your `.env` file when you run `npm start` or `npm run build`.
 
-## Running end-to-end tests
+## Building for Production
 
-For end-to-end (e2e) testing, run:
+To build the application for production:
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The build artifacts will be stored in the `dist/` directory.
 
-## Additional Resources
+## Important Notes
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Never commit the `.env` file to version control
+- Keep your API keys secure and never share them publicly
+- The `.env.example` file serves as a template for required environment variables
+
+## Troubleshooting
+
+If you encounter any issues with environment variables:
+1. Ensure the `.env` file exists in the project root
+2. Verify that your API key is correctly set in the `.env` file
+3. Try stopping and restarting the development server
+4. Check the browser console for any error messages

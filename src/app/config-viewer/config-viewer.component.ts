@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { getConfigurationByKey, initialize } from '@rulecms/client';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-config-viewer',
@@ -8,7 +9,7 @@ import { getConfigurationByKey, initialize } from '@rulecms/client';
   standalone: false,
 })
 export class ConfigViewerComponent implements OnInit {
-  configKey = 'example-config';
+  configKey = 'development-config-03sqva01';
   configData: any = null;
   isLoading = false;
   error: string | null = null;
@@ -43,5 +44,5 @@ export class ConfigViewerComponent implements OnInit {
 }
 
 initialize({
-  apiKey: 'your-api-key',
+  apiKey: environment.rulecmsApiKey,
 });
