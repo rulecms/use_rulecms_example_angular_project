@@ -29,13 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "fileReplacements": [
-              {
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.development.ts"
-              }
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -51,13 +45,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,

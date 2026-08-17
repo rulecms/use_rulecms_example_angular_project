@@ -14,16 +14,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'use_rulecms_example_angular_project' title`, () => {
+  it(`should have the widget demo title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('use_rulecms_example_angular_project');
+    expect(app.title).toEqual('RuleCMS Widget Demo');
   });
 
-  it('should render title', () => {
+  it('should render the widget demo heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, use_rulecms_example_angular_project');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'RuleCMS Widget Demo'
+    );
   });
 });

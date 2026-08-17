@@ -1,19 +1,29 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
-import { add, subtract } from '@rulecms/client';
+import {
+  RuleCMSWidgetComponent,
+  RuleCMSWidgetProviderComponent,
+} from '@rulecms/widget-angular';
+import * as sourceComponents from '@rulecms/source-components-angular';
+import {
+  DEFAULT_RULECMS_ENDPOINT,
+  DEMO_PUBLISHED_KEY,
+  DEMO_RULECMS_TOKEN,
+} from './rulecms-config';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RuleCMSWidgetProviderComponent, RuleCMSWidgetComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'use_rulecms_example_angular_project';
-  addResult = 0;
-  subtractResult = 0;
-  ngOnInit() {
-    this.addResult = add(1, 2);
-    this.subtractResult = subtract(1, 2);
-  }
+  title = 'RuleCMS Widget Demo';
+  token = DEMO_RULECMS_TOKEN;
+  publishedKey = DEMO_PUBLISHED_KEY;
+  endpoint = DEFAULT_RULECMS_ENDPOINT;
+  /**
+   * Required since @rulecms/widget-angular does not ship a concrete library.
+   * Register the default Angular source components here.
+   */
+  libraries = { default: sourceComponents };
 }
