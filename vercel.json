@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/use_rulecms_example_angular_project/browser",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

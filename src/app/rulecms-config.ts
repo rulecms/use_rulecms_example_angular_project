@@ -9,5 +9,3 @@ export const DEMO_PUBLISHED_KEY =
 /** Demo app token — local demo only. */
 export const DEMO_RULECMS_TOKEN =
   'lEYWhW85gwxHXj3cyomTsNra6MaXu8Q90aa1Q5zjNNVUdrGko7VYLZtMH5n9FI5E';
-
-export const DEFAULT_RULECMS_ENDPOINT = 'https://rulecms.com';

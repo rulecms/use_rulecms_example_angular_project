@@ -2,6 +2,10 @@
 
 A demonstration of how to integrate **RuleCMS widgets** into an Angular application using `@rulecms/widget-angular` and `@rulecms/source-components-angular`.
 
+## Live Demo
+
+**[https://use-rulecms-example-angular-project.vercel.app](https://use-rulecms-example-angular-project.vercel.app)**
+
 ## What is RuleCMS?
 
 **RuleCMS** is a visual content management system that lets you:
@@ -93,7 +97,6 @@ Demo values live in `src/app/rulecms-config.ts` (same widget and token as the Re
 
 - `DEMO_RULECMS_TOKEN` — app token used to fetch the widget
 - `DEMO_PUBLISHED_KEY` — published key for the demo widget
-- `DEFAULT_RULECMS_ENDPOINT` — `https://rulecms.com`
 
 Replace those constants with your own token and published key when you wire this up to your project.
 
@@ -109,7 +112,7 @@ Replace those constants with your own token and published key when you wire this
 **Provider inputs**
 
 - `token` (required): app token from RuleCMS project settings
-- `endpoint` (optional): API origin, defaults to `https://rulecms.com`
+- `endpoint` (optional): API origin override. Leave unset so published tokens hit widget-cache and `dev.` tokens hit rulecms.com
 - `libraries` (required for default cards): `{ default: sourceComponents }`
 
 **Widget inputs**
@@ -213,6 +216,7 @@ use_rulecms_example_angular_project/
 │   ├── main.ts
 │   └── styles.css
 ├── package.json
+├── vercel.json
 └── README.md
 ```
 

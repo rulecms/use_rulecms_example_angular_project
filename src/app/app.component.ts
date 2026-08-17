@@ -4,11 +4,7 @@ import {
   RuleCMSWidgetProviderComponent,
 } from '@rulecms/widget-angular';
 import * as sourceComponents from '@rulecms/source-components-angular';
-import {
-  DEFAULT_RULECMS_ENDPOINT,
-  DEMO_PUBLISHED_KEY,
-  DEMO_RULECMS_TOKEN,
-} from './rulecms-config';
+import { DEMO_PUBLISHED_KEY, DEMO_RULECMS_TOKEN } from './rulecms-config';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +16,6 @@ export class AppComponent {
   title = 'RuleCMS Widget Demo';
   token = DEMO_RULECMS_TOKEN;
   publishedKey = DEMO_PUBLISHED_KEY;
-  endpoint = DEFAULT_RULECMS_ENDPOINT;
   /**
    * Required since @rulecms/widget-angular does not ship a concrete library.
    * Register the default Angular source components here.
