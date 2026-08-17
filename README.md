@@ -4,7 +4,9 @@ A demonstration of how to integrate **RuleCMS widgets** into an Angular applicat
 
 ## Live Demo
 
-**[https://use-rulecms-example-angular-project.vercel.app](https://use-rulecms-example-angular-project.vercel.app)**
+**[View the live demo](https://use-rulecms-example-angular-project.vercel.app)**
+
+Experience the RuleCMS Angular widget integration without running the app locally.
 
 ## What is RuleCMS?
 
@@ -33,7 +35,7 @@ npm install
 npm start
 ```
 
-The app is at [http://localhost:4200](http://localhost:4200). This demo ships with the same published key and token as the React examples, so the widget should appear without extra setup.
+The app is at [http://localhost:4200](http://localhost:4200). Demo credentials in `src/app/rulecms-config.ts` are enough to render the widget without extra setup. Or skip local setup and use the [live demo](https://use-rulecms-example-angular-project.vercel.app).
 
 ## Adding RuleCMS widgets to your own Angular app
 
